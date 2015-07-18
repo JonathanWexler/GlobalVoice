@@ -1,0 +1,39 @@
+<head>
+	<title>GlobalVoice</title>
+</head>
+
+<body>
+
+	<div class="row top">
+		<div class="col-sm-2 col-sm-offset-2">
+			<div>
+				<img class="globe" src="/globe.png">
+			</div>
+		</div>
+		<div class="col-sm-6">
+			<div>
+				<h1 class="title text-center">GlobalVoice</h1>
+
+			</div>
+		</div>
+	</div>
+	<div class="buffered">
+
+	</div>
+
+	<div class="row">
+		<div class="col-sm-8 col-sm-offset-2">
+				{{> hello}}	
+		</div>
+	</div>
+
+
+
+</body>
+
+
+
+<template name="hello">
+	<button>Click Me</button>
+	<p>You've pressed the button {{counter}} times.</p>
+</template>
