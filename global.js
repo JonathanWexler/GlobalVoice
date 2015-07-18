@@ -1,4 +1,5 @@
-
+User = new Mongo.Collection("users");
+Question = new Mongo.Collection('questions')
 
 if (Meteor.isClient) {
   // counter starts at 0
