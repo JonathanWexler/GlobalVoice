@@ -1,13 +1,19 @@
+$('#yourForm').submit(function(event){
 
-  Template.input.events = {
-    'submit .new-message': function(event){
-      event.preventDefault();
+  event.preventDefault();
 
-      if (Meteor.user()){
-        var name = Meteor.user().username;
-      } else {
-        var name = 'Friend';
-      }
+
+});
+
+Template.input.events = {
+  'submit .new-message': function(event){
+    event.preventDefault();
+
+    if (Meteor.user()){
+      var name = Meteor.user().username;
+    } else {
+      var name = 'GlobalVoice';
+    }
 
     // var message = document.getElementById('message');
     var message = event.target.text.value;
@@ -24,3 +30,10 @@
     };
   }
 }
+
+$("input").keypress(function(event) {
+    if (event.which == 13) {
+        event.preventDefault();
+        $("form").submit();
+    }
+});
