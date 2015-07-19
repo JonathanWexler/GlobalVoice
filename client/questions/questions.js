@@ -12,6 +12,7 @@ Template.questions.rendered = function() {
 	Questions.insert({
 		main: "Should a country spend money to help another country?",
 		consider: "Is it a risk to the supporting country?",
+		nextOne: "What do you do for fun?",
 		time: new Date()
 	});
 	// 	Questions.insert({
@@ -30,9 +31,12 @@ Template.questions.events({
 	'click #agreed' : function(event){
 		$("#first-question").hide(1000);
 		$("#second-question").removeClass('hidden');
+
 	},
 	'click #disagree' : function(event){
 		Session.set('question_id', Session.get('question_id'))
 	},
+
+
 });
 
