@@ -13,16 +13,10 @@ Template.input.events = {
     if (Meteor.user()){
       var name = Meteor.user().username;
 
-      // setInterval(function () {
-      //   $("#first-question").hide(1000);
-      //   $("#second-question").removeClass('hidden');
-      // }, 10000);
 
-    $('.clock').FlipClock(18000, {countdown: true});
-
-    } else {
-      var name = 'GlobalVoice';
-    }
+} else {
+  var name = 'GlobalVoice';
+}
 
     // var message = document.getElementById('message');
     var message = event.target.text.value;

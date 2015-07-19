@@ -176,6 +176,11 @@ animation:spin 4s linear infinite;
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
+.clock {
+    padding-left: 20%;
+    padding-top: 5%;
+    /*width: 50%;*/
+}
 
 .fader{
    -webkit-animation: fadein 4s;
