@@ -13,10 +13,10 @@ Template.input.events = {
     if (Meteor.user()){
       var name = Meteor.user().username;
 
-      setInterval(function () {
-    $("#first-question").hide(1000);
-    $("#second-question").removeClass('hidden');
-  }, 10000);
+      // setInterval(function () {
+      //   $("#first-question").hide(1000);
+      //   $("#second-question").removeClass('hidden');
+      // }, 10000);
 
     $('.clock').FlipClock(18000, {countdown: true});
 
@@ -41,8 +41,8 @@ Template.input.events = {
 }
 
 $("input").keypress(function(event) {
-    if (event.which == 13) {
-        event.preventDefault();
-        $("form").submit();
-    }
+  if (event.which == 13) {
+    event.preventDefault();
+    $("form").submit();
+  }
 });

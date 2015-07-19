@@ -189,6 +189,10 @@ animation:spin 4s linear infinite;
     from { opacity: 1; }
     to   { opacity: 0; }
 }
+.login-link-and-dropdown-list {
+    padding-top: 20px;
+    font-size: 30px;
+}
 
 /*ANI*/
 
