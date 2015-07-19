@@ -4,7 +4,7 @@
       event.preventDefault();
 
       if (Meteor.user()){
-        var name = Meteor.user().profile.name;
+        var name = Meteor.user().username;
       } else {
         var name = 'Friend';
       }

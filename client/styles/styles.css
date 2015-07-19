@@ -6,7 +6,7 @@ body {
 }
 
 #main {
-    width: 500px;
+    width: 100%;
     margin: auto;
     text-align: left;
     background: white;
@@ -63,6 +63,8 @@ form input[type=text] {
     padding: 5px;
     margin-bottom: 5px;
     background-color: #eee;
+        width: 100%;
+    color: #333;
 }
 
 .chat .username {
