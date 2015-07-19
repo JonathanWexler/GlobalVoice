@@ -58,7 +58,7 @@ body {
 form {
     padding: 20px;
     padding-left: 0;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
 }
 
 form input[type=text] {
@@ -66,6 +66,9 @@ form input[type=text] {
     width: 70%;
     font-size: 12px;
     padding: 5px;
+}
+.long {
+    width: 100%;
 }
 
 .chat {
@@ -147,12 +150,19 @@ html, body {
 .question {
     color: orange;
 }
-
-.buffered {
-    min-height: 200px;
+.q-box:hover{
+    /*background-color: rgba(0, 135, 76,0.5);*/
 }
-.globe {
-    position: relative;
+/*.first-question:active{
+    -webkit-animation: fadeout 1s;
+    visibility: hidden;
+    }*/
+
+    .buffered {
+        min-height: 200px;
+    }
+    .globe {
+        position: relative;
 /*    top: 10%;
 left: 10%;*/
 width: 120px;
@@ -168,10 +178,49 @@ animation:spin 4s linear infinite;
 
 
 .fader{
-     -webkit-animation: fadein 4s;
+   -webkit-animation: fadein 4s;
 }
 
 @-webkit-keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
+}
+@-webkit-keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+/*ANI*/
+
+#container{
+    overflow:hidden;
+    height:48px;
+}
+.loading{
+    -webkit-animation: move;
+    position:relative;
+    -webkit-animation-duration: 8s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: step-start;
+    -webkit-animation-delay: 1s;
+}
+h3{ height:48px;margin:0;padding:0}
+@-webkit-keyframes move {
+    0% { margin-top: 0em; }
+    25% { margin-top: -48px; }
+    50% {margin-top: -96px;}
+    75% {margin-top: -144px; }
+    100% {margin-top: 0;}
+}
+
+h3{
+    -webkit-animation: fade;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: 3;
+}
+
+@-webkit-keyframes fade {
+    0% { opacity: 1; filter:alpha(opacity=100); }
+    50% { opacity: 0; filter:alpha(opacity=0); }
+    100% { opacity: 1; filter:alpha(opacity=100); }
 }

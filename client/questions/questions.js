@@ -13,6 +13,26 @@ Template.questions.rendered = function() {
 		main: "Should a country spend money to help another country?",
 		consider: "Is it a risk to the supporting country?",
 		time: new Date()
-	})
+	});
+	// 	Questions.insert({
+	// 	main: "Should a country spend money to help another Kountry?",
+	// 	consider: "Is it a risk to the supporting country?",
+	// 	time: new Date()
+	// });
+	// 		Questions.insert({
+	// 	main: "Should a country spend money to help another Country?",
+	// 	consider: "Is it a risk to the supporting country?",
+	// 	time: new Date()
+	// });
 }
+
+Template.questions.events({
+	'click #agreed' : function(event){
+		$("#first-question").hide(1000);
+		$("#second-question").removeClass('hidden');
+	},
+	'click #disagree' : function(event){
+		Session.set('question_id', Session.get('question_id'))
+	},
+});
 
