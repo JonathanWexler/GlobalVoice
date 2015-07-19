@@ -18,6 +18,8 @@ Template.input.events = {
     $("#second-question").removeClass('hidden');
   }, 10000);
 
+    $('.clock').FlipClock(18000, {countdown: true});
+
     } else {
       var name = 'GlobalVoice';
     }
