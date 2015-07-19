@@ -2,15 +2,22 @@ $('#yourForm').submit(function(event){
 
   event.preventDefault();
 
-
 });
 
 Template.input.events = {
   'submit .new-message': function(event){
     event.preventDefault();
 
+
+
     if (Meteor.user()){
       var name = Meteor.user().username;
+
+      setInterval(function () {
+    $("#first-question").hide(1000);
+    $("#second-question").removeClass('hidden');
+  }, 10000);
+
     } else {
       var name = 'GlobalVoice';
     }
