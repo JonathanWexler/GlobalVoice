@@ -9,3 +9,5 @@ twbs:bootstrap
 accounts-ui
 accounts-password
 insecure
+fortawesome:fontawesome
+frozeman:reactive-timer
