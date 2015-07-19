@@ -1,24 +1,26 @@
-Template.input.events = {
-  'submit form': function(event){
-    event.preventDefault();
 
-    if (Meteor.user()){
-      var name = Meteor.user().profile.name;
-    } else {
-      var name = 'Annoymous';
-    }
+  Template.input.events = {
+    'submit .new-message': function(event){
+      event.preventDefault();
 
-    var message = document.getElementById('message');
+      if (Meteor.user()){
+        var name = Meteor.user().profile.name;
+      } else {
+        var name = 'Friend';
+      }
+
+    // var message = document.getElementById('message');
+    var message = event.target.text.value;
 
     if (message.value !== '') {
       Messages.insert({
         name: name,
-        message: message.value,
-        time: Date.now()
+        message: message,
+        time: new Date()
       })
 
-      document.getElementById('message').value = '';
-      message.value = '';
+      // document.getElementById('message').value = '';
+      event.target.text.value = '';
     };
   }
 }
