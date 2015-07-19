@@ -1,8 +1,13 @@
+@import url('http://fonts.googleapis.com/css?family=Quicksand');
+
+/*Orange: #AA4D00*/
+/*Grey: #AAA9A9*/
+
 body {
-    background: #eee;
+    /*background: #eee;*/
     /*text-align: center;*/
     padding: 0 25px;
-    font-family: arial, sans-serif;
+    font-family: Quicksand;
 }
 
 #main {
@@ -10,9 +15,11 @@ body {
     margin: auto;
     text-align: left;
     background: white;
-    padding: 50px 60px;
+    padding: 20px 20px;
     border: solid #ddd;
     border-width: 0 1px 1px 1px;
+    border-radius: 6px;
+
 }
 
 #main h1 {
@@ -27,7 +34,9 @@ body {
 }
 
 #main ul {
-    padding-left: 20px;
+    padding-left: 10px;
+    border-radius: 6px;
+
 }
 
 #main .error {
@@ -61,11 +70,15 @@ form input[type=text] {
 
 .chat {
     padding: 5px;
+    border-radius: 6px;
     margin-bottom: 5px;
-    background-color: #eee;
+    /*background-color: #00874C; opacity: 0.5;*/
+    background-color: rgba(0, 135, 76,0.5);
     width: 100%;
     color: #333;
     float: left;
+    font-family: Quicksand;
+    font-size: 20px;
 }
 
 .chat .username {
@@ -73,7 +86,7 @@ form input[type=text] {
 }
 
 .chat:hover {
-    background-color: #ddd;
+    background-color: rgba(0, 135, 76,0.2);
 }
 
 .spinner {
@@ -101,24 +114,38 @@ html {
 /* CSS declarations go here */
 
 html, body {
-    background-color: #333;
+    /*background-color: #333;*/
+    background-image: url("connect.png");
+    background-repeat: repeat;
     color: #333;
 }
+.invert {-webkit-filter: invert(100%);}
+
 
 .title {
     font-size: 70px;
     color: #333;
 }
-textarea {
+.textarea {
     width: 100%;
     color: #333;
+    border-radius: 6px;
 }
 .top {
     background-color: #fff;
+    margin: -30px;
+    padding-top: 30px;
 }
 .messages {
     font-size: 20px;
     color: orange;  
+}
+.logo{
+    width: 100%;
+    padding: 5px; 
+}
+.question {
+    color: orange;
 }
 
 .buffered {
@@ -138,3 +165,13 @@ animation:spin 4s linear infinite;
 @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+
+.fader{
+     -webkit-animation: fadein 4s;
+}
+
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
