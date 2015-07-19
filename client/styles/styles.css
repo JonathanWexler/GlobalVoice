@@ -1,6 +1,6 @@
 body {
     background: #eee;
-    text-align: center;
+    /*text-align: center;*/
     padding: 0 25px;
     font-family: arial, sans-serif;
 }
@@ -63,8 +63,9 @@ form input[type=text] {
     padding: 5px;
     margin-bottom: 5px;
     background-color: #eee;
-        width: 100%;
+    width: 100%;
     color: #333;
+    float: left;
 }
 
 .chat .username {
