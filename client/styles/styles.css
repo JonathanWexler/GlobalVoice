@@ -122,7 +122,7 @@ html, body {
     background-repeat: repeat;
     color: #333;
 }
-.invert {-webkit-filter: invert(100%);}
+/*.invert {-webkit-filter: invert(90%);}*/
 
 
 .title {
@@ -163,10 +163,11 @@ html, body {
     }
     .globe {
         position: relative;
+        padding-top: 20px;
 /*    top: 10%;
 left: 10%;*/
-width: 120px;
-height: 120px;
+width: 80px;
+height: 80px;
 /*margin:-60px 0 0 -60px;*/
 -webkit-animation:spin 4s linear infinite;
 -moz-animation:spin 4s linear infinite;
@@ -183,7 +184,7 @@ animation:spin 4s linear infinite;
 }
 
 .fader{
-   -webkit-animation: fadein 4s;
+ -webkit-animation: fadein 4s;
 }
 
 @-webkit-keyframes fadein {
