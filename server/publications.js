@@ -14,8 +14,13 @@ Meteor.startup(function() {
 
 			return Questions.remove({});
 
-		}
+		},
 
+		removeAllChat: function() {
+
+			return Messages.remove({});
+
+		}
 	});
 
 });
